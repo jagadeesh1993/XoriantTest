@@ -1,29 +1,28 @@
-class Createcredentialpage{
+class Loginpage{
 
-    get enterpinbox() {
-        return $('//android.widget.TextView[@text="Enter your PIN Code"]')
+    get Usernamefield() {
+        return $('//android.widget.EditText[@text="Username"]')
     }
   
-    get scanQRcodebutton(){
-        return $('//android.widget.TextView[@resource-id="RoundedButton.text"]')
+    get passwordfield(){
+        return $('//android.widget.EditText[@text="Password"]')
+    }
+
+    get loginbtn (){
+        return $('//android.widget.TextView[@text="LOGIN"]')
     }
   
-    async clickenterbutton(){
-      await driver.hideKeyboard();
-      await driver.pressKeyCode(10);
-      await driver.pressKeyCode(10);
-      await driver.pressKeyCode(10);
-      await driver.pressKeyCode(10);
-      await driver.pressKeyCode(10);
-      await driver.pressKeyCode(10);
-      await driver.pause(5000);
+    async enterusername(){
+    await this.Usernamefield.setValue('standard_user');
+    }
+    async enterpassword(){
+    await this.passwordfield.setValue('sauce_user');
+    }
+
   
-      await this.enterpinbox.click();
-      }
-  
-    async clickscanbtn(){
-    await this.scanQRcodebutton.click();
+    async clickloginbtn(){
+    await this.loginbtn.click();
      }
   }
   
-  module.exports = new Createcredentialpage()
+  module.exports = new Loginpage()

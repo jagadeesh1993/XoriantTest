@@ -24,7 +24,8 @@ exports.config = {
     // of the config file unless it's absolute.
     //
     specs: [
-          "./test/specs/Verifyloginpage.js"
+          //"./test/specs/Verifyloginpage.js"
+          "./test/specs/Verify_LoginSuccess.js"
       ],
     // Patterns to exclude.
     exclude: [
@@ -59,7 +60,8 @@ exports.config = {
         'appium:platformVersion': '13.0',
         'appium:automationName': 'UiAutomator2',
         'appium:app': path.join(process.cwd(),"./app/android/Sampleapp.apk"),
-        'appium:appPackage': 'com.swaglabsmobileapp'
+        'appium:appPackage': 'com.swaglabsmobileapp',
+        'appium:appActivity' : 'com.swaglabsmobileapp.SplashActivity'
     },
 ],
 
