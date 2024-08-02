@@ -1,11 +1,11 @@
-const Verifyloginpagetest = require("../../Pages/LoginPage.js")
+const LoginPage = require("../../Pages/LoginPage")
 
 describe('Login Page Test Cases', () => {
 
     it('Login Page', async() => {
-     Verifyloginpagetest.enterusername()
-     Verifyloginpagetest.enterpassword()
-     Verifyloginpagetest.clickloginbtn()
+
+        LoginPage.login('standard_user', 'secret_sauce')
+     
      
     })
 })

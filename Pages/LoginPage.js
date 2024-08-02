@@ -1,9 +1,9 @@
 class Loginpage{
 
-    get Usernamefield() {
+    get usernamefield() {
         return $('//android.widget.EditText[@text="Username"]')
     }
-  
+  llll
     get passwordfield(){
         return $('//android.widget.EditText[@text="Password"]')
     }
@@ -12,17 +12,14 @@ class Loginpage{
         return $('//android.widget.TextView[@text="LOGIN"]')
     }
   
-    async enterusername(){
-    await this.Usernamefield.setValue('standard_user');
-    }
-    async enterpassword(){
-    await this.passwordfield.setValue('sauce_user');
-    }
-
-  
-    async clickloginbtn(){
+    async login(username, password){
+    await this.Usernamefield.click();
+    await this.Usernamefield.setValue(username);
+    await this.passwordfield.click();
+    await this.passwordfield.setValue(password);
     await this.loginbtn.click();
-     }
+    }
+   
   }
   
   module.exports = new Loginpage()
