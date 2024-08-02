@@ -8,7 +8,7 @@ SWAG App Automation
 2.Java
 
 
-### Upating the capabilities
+### Updating the capabilities
 
 Before you run the application on a device/simulator you have to update the capability in wdio.conf.js
 
@@ -19,9 +19,7 @@ platformName: 'Android',
         'appium:platformVersion': '13.0',
 
 
-Step 2: Install pods by first navigating to /ios and then using: 
-
-Specify the test which you need to run in wio.conf.js
+Step 2: Specify the test which you need to run in wdio.conf.js
 
 ### To run the application on a device use the command
 
